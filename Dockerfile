@@ -1,11 +1,11 @@
 FROM gentoo/stage3:latest
 
-RUN emerge --sync
+RUN emerge --sync --quiet
 
 # install clang
-RUN emerge sys-devel/clang
+RUN emerge sys-devel/clang --quiet
 # install distcc
-RUN emerge sys-devel/distcc
+RUN emerge sys-devel/distcc --quiet
 
 # create log file and set permissions
 RUN touch /var/log/distccd.log
