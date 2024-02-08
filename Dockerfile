@@ -4,6 +4,8 @@ RUN emerge --sync
 
 # install distcc
 RUN emerge sys-devel/distcc
+# install clang
+RUN emerge sys-devel/clang
 
 # create log file and set permissions
 RUN touch /var/log/distccd.log
