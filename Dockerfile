@@ -2,6 +2,10 @@ FROM gentoo/stage3:latest
 
 RUN emerge --sync --quiet
 
+RUN echo sys-devel/gcc cxx > /etc/portage/package.use/gcc
+
+# make sure gcc is installed, it should be by default
+RUN emerge sys-devel/gcc
 # install clang
 RUN emerge sys-devel/clang --quiet
 # install distcc
