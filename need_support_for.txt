@@ -11,12 +11,6 @@ g++
 g++-13
 gcc
 gcc-13
-i686-pc-linux-gnu-clang
-i686-pc-linux-gnu-clang++
-i686-pc-linux-gnu-clang++-16
-i686-pc-linux-gnu-clang++-17
-i686-pc-linux-gnu-clang-16
-i686-pc-linux-gnu-clang-17
 x86_64-pc-linux-gnu-c++
 x86_64-pc-linux-gnu-cc
 x86_64-pc-linux-gnu-clang
