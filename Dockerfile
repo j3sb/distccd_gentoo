@@ -1,6 +1,6 @@
 FROM gentoo/stage3:latest
 
-RUN emerge --sync
+RUN emerge --sync --quiet
 
 RUN echo sys-devel/gcc cxx > /etc/portage/package.use/gcc
 
