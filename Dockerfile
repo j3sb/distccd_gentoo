@@ -7,9 +7,12 @@ RUN echo sys-devel/gcc cxx > /etc/portage/package.use/gcc
 # make sure gcc is installed, it should be by default
 RUN emerge sys-devel/gcc --quiet
 # install clang
-RUN emerge llvm-core/clang --quiet
+RUN emerge llvm-core/clang llvm-core/clang:18 llvm-core/clang:19 --quiet
 # install distcc
 RUN emerge sys-devel/distcc --quiet
+
+# make image smaller
+RUN emerge --depclean --quiet
 
 # create log file and set permissions
 RUN touch /var/log/distccd.log
