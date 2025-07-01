@@ -27,7 +27,6 @@ ENV OPTIONS --port 3632 --log-file /var/log/distccd.log --allow 192.168.0.0/16 -
 # distccd port
 EXPOSE 3632
 
-
 USER distcc
 
 ENTRYPOINT /usr/bin/distccd --no-detach --daemon $OPTIONS

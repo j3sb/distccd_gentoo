@@ -1,12 +1,3 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-# GitHub recommends pinning actions to a commit SHA.
-# To get a newer version, you will need to update the SHA.
-# You can also reference a tag or branch, but the action may change without warning.
-
 name: Publish Docker image
 
 on:
@@ -15,9 +6,6 @@ on:
   push:
     branches: [ "master" ]
   workflow_dispatch:
-  issues:
-    types:
-      - opened
 
 jobs:
   push_to_registries:
@@ -31,5 +19,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: Build image
-        run: |
-          docker build -t distccd_gentoo .
+        run: docker build -t j3sb/distccd .
+
+      - name: Publish image
+        run: docker push j3sb/distccd
