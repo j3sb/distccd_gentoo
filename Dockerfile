@@ -12,6 +12,8 @@ RUN emerge llvm-core/clang --quiet
 RUN emerge sys-devel/distcc --quiet
 # cross dev for arm64 machines (eg. raspberry pi)
 RUN emerge sys-devel/crossdev
+RUN emerge app-eselect/eselect-repository
+RUN eselect repository create crossdev
 RUN crossdev --stable -t aarch64-unknown-linux-gnu
 
 # make image smaller
