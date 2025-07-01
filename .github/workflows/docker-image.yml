@@ -31,6 +31,5 @@ jobs:
         uses: actions/checkout@master
 
       - name: Build image
-        working-directory: docker/base
         run: |
           docker build -t distccd_gentoo .
