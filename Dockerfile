@@ -10,6 +10,9 @@ RUN emerge sys-devel/gcc --quiet
 RUN emerge llvm-core/clang --quiet
 # install distcc
 RUN emerge sys-devel/distcc --quiet
+# cross dev for arm64 machines (eg. raspberry pi)
+RUN emerge sys-devel/crossdev
+RUN crossdev --stable -t aarch64-unknown-linux-gnu
 
 # make image smaller
 RUN emerge --depclean --quiet
