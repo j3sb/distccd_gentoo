@@ -1,8 +1,5 @@
 FROM gentoo/stage3:latest
 
-# dns doesn't seem to work else
-RUN echo "nameserver 1.1.1.1" > /etc/resolv.conf
-
 RUN emerge --sync --quiet
 
 RUN echo sys-devel/gcc cxx > /etc/portage/package.use/gcc
