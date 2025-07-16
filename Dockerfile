@@ -5,7 +5,7 @@ RUN emerge --sync --quiet
 RUN echo sys-devel/gcc cxx > /etc/portage/package.use/gcc
 
 # make sure gcc is installed, it should be by default
-RUN emerge sys-devel/gcc --quiet
+#RUN emerge sys-devel/gcc --quiet
 # install clang
 RUN emerge llvm-core/clang
 # install distcc
