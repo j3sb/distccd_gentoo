@@ -23,6 +23,9 @@ RUN emerge --depclean --quiet
 RUN touch /var/log/distccd.log
 RUN chown distcc:root /var/log/distccd.log
 
+# clean cache for smaller image size
+RUN rm -rf /var/tmp/portage /var/cache/distfiles /var/cache/binpkgs/
+
 # set run options
 ENV OPTIONS --port 3632 --log-file /var/log/distccd.log --allow 192.168.0.0/16 --allow 10.8.0.0/16
 
