@@ -31,4 +31,4 @@ EXPOSE 3632
 
 USER distcc
 
-ENTRYPOINT /usr/bin/distccd --daemon $OPTIONS && tail -f /var/log/distccd.log
+ENTRYPOINT /usr/bin/distccd --daemon $OPTIONS && echo daemon is starting! && tail -f /var/log/distccd.log
